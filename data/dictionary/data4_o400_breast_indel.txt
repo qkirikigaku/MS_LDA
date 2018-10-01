@@ -1,0 +1,14 @@
+small,AA
+small,TG
+small,CT
+small,GA
+small,GC
+small,CG
+small,AC
+small,TA
+big,TG
+small,CC
+big,CC
+big,AA
+big,AC
+small,AT
