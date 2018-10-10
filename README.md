@@ -23,7 +23,7 @@ Then, an input file (`data1_o400_breast.txt`) is created under the `data/` direc
 The first row of the input file shows the number of samples and the number of mutational types, and the breakdown of each sample's mutation is shown after the second row.
 
 ## To compile
-Execute `make compile`.
+Execute `make`.
 
 ## To extract mutation signatures
 Change the input destination and the output destination of source code as necessary.
