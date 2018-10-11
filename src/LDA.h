@@ -404,7 +404,8 @@ void LDA::write_data(){
     ofs.open(output_file_name, ios::out);
     ofs << to_string(temp_vlb) << "\n";
     ofs << "0" << "\n";
-    int k, v;
+
+    int d, k, v;
     vector<vector<double> > Enkv;
     vector<double> sum_output;
     Enkv.resize(num_topic);
@@ -420,6 +421,23 @@ void LDA::write_data(){
         }
         ofs << "\n";
     }
+
+    vector<vector<double> > Endk;
+    vector<double> sum_output_a;
+    Endk.resize(num_doc);
+    sum_output.resize(num_doc,0);
+    for (d = 0; d < num_doc; d++){
+        Endk[d].resize(num_doc, 0);
+        for (k = 0; k < num_topic; k++){
+            sum_output[d] += exp(log_sum_qz_i[d][k]);
+        }
+        for (k = 0; k < num_topic; k++){
+            Endk[d][k] = exp(log_sum_qz_i[d][k]) / sum_output[d];
+            ofs << to_string(Endk[d][k]) << " ";
+        }
+        ofs << "\n";
+    }
+
 	for (k = 0; k < num_topic; k++){
 	    ofs << alpha[k] << " ";
 	}
