@@ -54,7 +54,7 @@ void LDA::run_VB(){
     initialize();
     old_vlb = -10e15;
     Update_parameter();
-    for (int i=0; i < 300; i++){
+    for (int i=0; i < 1000; i++){
         cout << "iter : " << i << endl;
         Update_log_qz();
         Update_parameter();
