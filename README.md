@@ -1,3 +1,5 @@
+Please refer to our paper: [Discovering novel mutation signatures by latent Dirichlet allocation with variational Bayes inference](https://academic.oup.com/bioinformatics/article/35/22/4543/5472341?login=true) for more detailed information.
+
 # MS_LDA
 MS_LDA extracts mutation signatures contained in samples from mutation catalogs of cancer genome with Bayesian model called latent Dirichlet allocation (LDA) and variational Bayes method (VB).
 
